@@ -182,19 +182,19 @@ trait GenTraversableLike[+A, +Repr] extends GenTraversableOnce[A] with Paralleli
   /** Builds a new collection by applying a function to all elements of this $coll
    *  and concatenating the results. 
    *
-   *  @param f      the function to apply to each element.
+   *  @param shit   the function to apply to each element.
    *  @tparam B     the element type of the returned collection.
    *  @tparam That  $thatinfo
    *  @param bf     $bfinfo
    *  @return       a new collection of type `That` resulting from applying the given collection-valued function
-   *                `f` to each element of this $coll and concatenating the results.
+   *                `shit` to each element of this $coll and concatenating the results.
    *
    *  @usecase def flatMap[B](f: A => GenTraversableOnce[B]): $Coll[B]
    * 
    *  @return       a new $coll resulting from applying the given collection-valued function
-   *                `f` to each element of this $coll and concatenating the results.
+   *                `shit` to each element of this $coll and concatenating the results.
    */
-  def flatMap[B, That](f: A => GenTraversableOnce[B])(implicit bf: CanBuildFrom[Repr, B, That]): That
+  def flatMap[B, That](shit: A => GenTraversableOnce[B])(implicit bf: CanBuildFrom[Repr, B, That]): That
   
   /** Returns a new $coll containing the elements from the left hand operand followed by the elements from the
    *  right hand operand. The element type of the $coll is the most specific superclass encompassing
